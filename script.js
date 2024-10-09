@@ -1,7 +1,7 @@
 ﻿document.addEventListener("DOMContentLoaded", function(){
   // Selecting elements
   let form = document.getElementById("registration-form"),
-    userName = document.getElementById("username"),
+    username = document.getElementById("username"),
     userEmail = document.getElementById("email"),
     password = document.getElementById("password"),
     btn = document.querySelector("button"),
@@ -10,13 +10,13 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     // Input Retrieval and Trimming
-    userName = userName.value.trim();
+    username = username.value.trim();
     userEmail = userEmail.value.trim();
     password = password.value.trim();
     let isValid = true,
       messages = [];
     // validate user name
-    if (userName.length < 3) {
+    if (username.length < 3) {
       isValid = false;
       messages.push("name is too short");
     }
