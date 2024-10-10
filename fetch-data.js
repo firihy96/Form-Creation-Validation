@@ -7,7 +7,7 @@ let apiUrl ='https://jsonplaceholder.typicode.com/users',
     dataContainer.innerHTML = '';
     let userList = `<ul></ul>`;
     users.forEach(user=> {
-        let userElement =  `<li>${user}</li>` ;
+        let userElement =  `<li>${user.name}</li>` ;
       return userList.appendChild(userElement)
     })
     dataContainer.appendChild(userList)
