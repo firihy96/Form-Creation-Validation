@@ -1,6 +1,6 @@
 async function fetchUserData(){
 let apiUrl ='https://jsonplaceholder.typicode.com/users',
-  dataContainer = document.getElementByID('api-data');
+  dataContainer = document.getElementById('api-data');
   try {
     let response = await fetch(apiUrl);
     let users = ressponse.json();
