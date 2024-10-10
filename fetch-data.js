@@ -5,9 +5,10 @@ let apiUrl ='https://jsonplaceholder.typicode.com/users',
     let response = await fetch(apiUrl);
     let users = await response.json();
     dataContainer.innerHTML = '';
-    let userList = `<ul></ul>`;
+    let userList = document.createElement('ul');
     users.forEach(user=> {
-        let userElement =  `<li>${user.name}</li>` ;
+        let userElement =  document.createElement('li');
+      userElement.innerText = user.name;
       return userList.appendChild(userElement)
     })
     dataContainer.appendChild(userList)
